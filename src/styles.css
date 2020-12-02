@@ -1,0 +1,146 @@
+
+
+body {
+  margin: 0;
+  background-color: #2b3034;
+}
+
+ul {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: #001738;
+}
+
+button:focus {
+  outline: none;
+}
+
+svg {
+ 
+  -webkit-transform: translateZ(0);
+}
+
+
+
+.border-top,
+.border-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.padding-h40 {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.subtitle {
+  color: #8492a6 !important;
+}
+
+.overflow-hidden {
+
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+}
+
+
+
+.padding-h40,
+.page__header,
+.body__container {
+  transition: padding 0.15s cubic-bezier(0.2, 0, 0.38, 0.9);
+}
+
+@media screen and (max-width: 965px) {
+  .open-drawer .padding-h40 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .open-drawer .page__header {
+    padding: 0 8px;
+  }
+
+  .open-drawer .body__container {
+    padding: 24px 16px 24px 15px;
+  }
+
+  .open-drawer .grid {
+    grid-gap: 16px;
+  }
+}
+
+@media screen and (max-width: 639px) {
+  .padding-h40 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .page .page__header {
+    padding: 0 8px;
+  }
+
+  .page__body .body__container {
+    padding: 24px 16px 24px 15px;
+  }
+
+  .page__body .grid {
+    grid-gap: 16px;
+  }
+}
+
+/* dynamic Header buttons */
+
+.dynamic-button .button {
+  display: flex;
+}
+
+.dynamic-button .button--icon {
+  display: none;
+}
+
+@media screen and (max-width: 1354px) {
+  .open-drawer .dynamic-button .button {
+    display: none;
+  }
+
+  .open-drawer .dynamic-button .button--icon {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 1028px) {
+  .dynamic-button .button {
+    display: none;
+  }
+
+  .dynamic-button .button--icon {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 1104px) {
+  .open-drawer .page__header .action:not(:last-child) {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 778px) {
+  .page__header .action:not(:last-child) {
+    display: none;
+  }
+}
